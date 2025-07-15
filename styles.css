@@ -1,13 +1,33 @@
 body {
-    height: 100vh;
+    padding: 20px;
     margin: 0px;
-    padding: 0px;
-    background-color: #000000;
+    background-color: black;
+    color:green;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+#app {
+    width: 100%;
+    height: calc(100vh - 20px);
+}
+
+p {
+    width: 100%;
+    background-color: black;
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 17px;
+    white-space: pre-line;
+    margin: 0px;
 }
 
 input {
     outline: none;
     border: none;
     background-color: white;
-    height:24px;
+    height: 25px;
+    margin-top: 5px;
 }
