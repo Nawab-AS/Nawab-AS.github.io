@@ -14,7 +14,7 @@
 
 
     "ls": {
-        "output": "commands.json  default.txt  index.html  index.js  README.md  styles.css",
+        "output": "commands.js commands.json  default.txt  index.html  index.js  README.md  styles.css",
         "speed": 50,
         "help": "Use the 'ls' command to list all files and directories."
     },
