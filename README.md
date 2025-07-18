@@ -31,6 +31,14 @@ To view this portfolio locally, follow these steps:
 5. Open the `localhost:8000` file in your browser to explore the portfolio.
 
 
+## Features
+
+- **Terminal-like interface**: A simulated terminal experience for user interaction.
+- **Easily Extensible**: Supports custom commands like help, about, projects, and more.
+- **Dynamic content**: Fetches and displays data from GitHub (e.g., profile README, repositories).
+- **Customizable template**: Easily adaptable for other users by modifying variables like githubUsername and email.
+
+
 ## Screenshots
 
 Here is a preview of the terminal interface:
