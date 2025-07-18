@@ -1,4 +1,18 @@
 {
+    "about": {
+        "run": "about",
+        "help": "Use the 'about' command to learn more about me."
+    },
+    "contact": {
+        "run": "contact",
+        "help": "Use the 'contact' command to get my contact information."
+    },
+    "projects": {
+        "run": "projects",
+        "help": "Use the 'projects' command to see my most recent projects."
+    },
+
+
     "ls": {
         "output": "commands.json  default.txt  index.html  index.js  README.md  styles.css",
         "speed": 50,
