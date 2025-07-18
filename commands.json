@@ -1,0 +1,37 @@
+{
+    "ls": {
+        "output": "commands.json  default.txt  index.html  index.js  README.md  styles.css",
+        "speed": 50,
+        "help": "Use the 'ls' command to list all files and directories."
+    },
+    "pwd": {
+        "output": "/home/user/portfolio",
+        "speed": 50,
+        "help": "Use the 'pwd' command to print the current working directory."
+    },
+    "whoami": {
+        "output": "user",
+        "speed": 50,
+        "help": "Use the 'whoami' command to display the current user."
+    },
+    "uname": {
+        "output": "Linux",
+        "speed": 50,
+        "help": "Use the 'uname' command to print the operating system name."
+    },
+    "hostname": {
+        "output": "user",
+        "speed": 50,
+        "help": "Use the 'hostname' command to display the system's host name."
+    },
+    "uptime": {
+        "output": "12:34:56 up 1 day,  2:34,  1 user,  load average: 0.00, 0.01, 0.05",
+        "speed": 50,
+        "help": "Use the 'uptime' command to show how long the system has been running."
+    },
+    "df": {
+        "output": "Filesystem     1K-blocks    Used Available Use% Mounted on\n/dev/root        3032356 1234567   1678901  43% /",
+        "speed": 50,
+        "help": "Use the 'df' command to report file system disk space usage."
+    }
+}

@@ -2,7 +2,7 @@ body {
     padding: 20px;
     margin: 0px;
     background-color: black;
-    color:green;
+    color: green;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
     font-size: 17px;
@@ -10,16 +10,11 @@ body {
 
 #app {
     width: 100%;
-    height: calc(100vh - 20px);
+    height: calc(100vh - 40px);
 }
 
 p {
     width: 100%;
-    background-color: black;
-    color: green;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 600;
-    font-size: 17px;
     white-space: pre-line;
     margin: 0px;
 }
@@ -27,7 +22,13 @@ p {
 input {
     outline: none;
     border: none;
-    background-color: white;
-    height: 25px;
-    margin-top: 5px;
+    background-color: black;
+    color: green;
+    height: 19px;
+    padding: 0px;
+    width: calc( 100% - 183.5px );
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 17px;
 }
