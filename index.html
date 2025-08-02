@@ -5,20 +5,17 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
-    <script src="https://unpkg.com/vue-showdown@latest/dist/vue-showdown.min.js"></script> -->
     <script src="index.js" defer></script>
     <script src="commands.js" defer></script>
 </head>
-
 <body>
-    <div style="display:none;" :style="{ display: 'block' }" id="app">
-
+    <div id="app">
         <p>{{ terminal }}</p>
         <div v-if="!disabled" id="command">
             <p style="display: inline-block; width: 183.5px;">user@Portfolio:~$</p>
-            <input type="text" name="command" v-model="command" @keyup.enter.prevent="executeCommand" />
+            <input type="text" name="command" v-model="command" @keyup.enter.prevent="executeCommand" autocomplete="off"/>
         </div>
+        <div id="focus"></div>
     </div>
 </body>
 </html>

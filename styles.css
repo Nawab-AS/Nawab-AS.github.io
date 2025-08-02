@@ -1,6 +1,6 @@
 body {
-    padding: 20px;
     margin: 0px;
+    padding: 0px;
     background-color: black;
     color: green;
     font-family: 'Courier New', Courier, monospace;
@@ -9,14 +9,15 @@ body {
 }
 
 #app {
-    width: 100%;
-    height: calc(100vh - 40px);
+    margin: 20px;
+    width: calc(100% - 40px);
+    height: max-content;
 }
 
 p {
-    width: 100%;
     white-space: pre-line;
     margin: 0px;
+    overflow-wrap: anywhere;
 }
 
 input {

@@ -4,9 +4,13 @@ const terminal = ref('');
 const command = ref('');
 const disabled = ref(true);
 
-
 async function type(text, delay=50) {
+    const focus = document.getElementById('focus');
     if (delay === 0) {terminal.value += text;return;}
+
+    let scroll = setInterval(() => {
+        focus.scrollIntoView({ behavior: 'smooth' })
+    }, 100);
 
     for (let i = 0; i < text.length; i++) {
         setTimeout(() => {
@@ -14,7 +18,8 @@ async function type(text, delay=50) {
         }, delay * i);
     }
 
-    await new Promise(resolve => setTimeout(resolve, delay * (text.length+1)));
+    await new Promise(resolve => setTimeout(resolve, delay * (text.length+2)));
+    clearInterval(scroll);
     return;
 }
 
@@ -26,8 +31,8 @@ fetch('default.txt').then(response => response.text())
     .catch(error => console.error('Error fetching default.txt:', error));
 setTimeout(async () => {
     await type('Initializing Terminal', 50);
-    await type(' ...\n', 500);
-    await type("\n"+introText+"\n\n", 1);
+    await type('...', 400);
+    await type("\n\n"+introText+"\n\n", 1);
     await type('Welcome to my portfolio!\nType "help" for commands.', 50);
     disabled.value = false;
 }, 1500);
@@ -120,10 +125,6 @@ async function executeCommand(e) { // TODO: add command history
 const app = createApp({
     setup() {
         return { terminal, command, disabled, executeCommand };
-    }/*,
-    components: {
-        'vue-showdown': VueShowdown
-    }*/
+    }
 });
-//app.component('VueShowdown', VueShowdown.default);
-app.mount('body');
+app.mount('#app');
