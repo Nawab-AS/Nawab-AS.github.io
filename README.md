@@ -59,6 +59,45 @@ The initial text can easily be modified by changing the contents of the ```defau
 The text inside of the ```default.txt``` file will be appended to the console as **plaintext** and NOT as html.
 
 
+## Customizing the `about` Command
+
+The built-in `about` command simply displays the raw github profile readme file. Because of this there are some things that would be undesirable to display on both the github profile and this portfolio such as embedded images as they will be rendered as plaintext in the portfolio.
+
+The solution is to hide certain parts of the `readme.md` file, this is implemented using comments as they will continue to work across different markdown viewers while still being supported by the portfolio.
+
+### Hiding Text From This Portfolio
+
+In order to hide text from this portfolio such as badges and images, you can use wrap the lines with:
+
+```
+<!-- hideInPortfolio start -->
+
+this will not be displayed in the portfolio
+
+![Apple](https://example.com/example.png)
+
+<!-- hideInPortfolio end -->
+```
+
+### Hiding Text From Github Profile Readme
+
+In order to hide text from the Github profile readme, use wrap the lines with:
+
+```
+<!-- hideInReadme start
+
+This will not be visible in the Github profile readme
+
+## Top Languages
+
+1) Javascript
+2) Python
+3) C#
+
+hideInReadme end -->
+```
+
+
 ## Adding Commands
 
 ### Static Commands

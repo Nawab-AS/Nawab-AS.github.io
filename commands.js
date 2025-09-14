@@ -3,12 +3,23 @@ const email = 'nawab-as@hackclub.app';
 const profileReadme = ref('');
 
 
-async function about(args) { await type(`\n\n${profileReadme.value}`, 50) }
+async function about(args) { await type(`\n\n${profileReadme.value}\n\n`, 50) }
 // Fetch GitHub profile README
 fetch(`https://raw.githubusercontent.com/${githubUsername}/${githubUsername}/main/README.md`)
     .then(response => { return response.text() })
-    .then(text => { profileReadme.value = text.replace(/<!--(.*?)-->/gms, '') }) // Fetch the README file and remove comments
-    .catch(error => { profileReadme.value = `HTTP error! status: ${error.status}` });
+    .then(text => {  // Fetch the README file and remove comments
+        profileReadme.value = text.replace(/<!-- hideInPortfolio start -->(.*?)<!-- hideInPortfolio end -->/gms, '');
+
+        // Remove only the start and end markers, keep the content inside
+        profileReadme.value = profileReadme.value.replace(/<!--\s*hideInReadme start\s*/g, '')
+                        .replace(/\s*hideInReadme end\s*-->/g, '');
+        
+        profileReadme.value = profileReadme.value.replace(/<!--(.*?)-->/gms, ''); // Remove all other comments
+        profileReadme.value = profileReadme.value.replace(/\n+$/, ''); // Remove trailing newlines
+    })
+    .catch(error => {
+        profileReadme.value = `Error fetching README: ${error.message}`;
+    });
 
 
 async function contact(args) {
