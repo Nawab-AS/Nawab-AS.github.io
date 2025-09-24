@@ -68,6 +68,7 @@ let commands;
 
 async function executeCommand(e) { // TODO: add command history
     e.preventDefault();
+    if (disabled.value) return;
     let cmd = command.value.trim();
     terminal.value += `\nuser@Portfolio:~$ ${cmd}`;
 
