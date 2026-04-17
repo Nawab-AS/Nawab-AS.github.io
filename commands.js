@@ -1,5 +1,5 @@
 const githubUsername = 'Nawab-AS';
-const email = 'nawab-as@hackclub.app';
+const email = 'hello@nawab-as.dev';
 const profileReadme = ref('');
 
 
